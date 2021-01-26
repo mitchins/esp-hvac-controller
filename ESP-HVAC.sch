@@ -14,99 +14,66 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Transistor_BJT:BC547 Q?
+L Transistor_BJT:BC547 Q1
 U 1 1 601444D5
 P 3050 3450
-F 0 "Q?" H 3241 3496 50  0000 L CNN
+F 0 "Q1" H 3241 3496 50  0000 L CNN
 F 1 "BC547" H 3241 3405 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3250 3375 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 3250 3375 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 3050 3450 50  0001 L CNN
 	1    3050 3450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4007 D?
+L Diode:1N4007 D5
 U 1 1 601451F4
-P 3150 2850
-F 0 "D?" H 3150 3067 50  0000 C CNN
-F 1 "1N4007" H 3150 2976 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3150 2675 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3150 2850 50  0001 C CNN
-	1    3150 2850
+P 3400 2850
+F 0 "D5" H 3400 3067 50  0000 C CNN
+F 1 "1N4007" H 3400 2976 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3400 2675 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3400 2850 50  0001 C CNN
+	1    3400 2850
 	0    1    1    0   
 $EndComp
 $Comp
-L Relay:G5Q-1 K?
+L Relay:G5Q-1 K1
 U 1 1 60146C49
 P 4150 2850
-F 0 "K?" H 4580 2896 50  0000 L CNN
-F 1 "G5Q-1" H 4580 2805 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPDT_Omron-G5Q-1" H 4600 2800 50  0001 L CNN
+F 0 "K1" H 4580 2896 50  0000 L CNN
+F 1 "SRD-03VDC-SL-C" H 4580 2805 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 4600 2800 50  0001 L CNN
 F 3 "https://www.omron.com/ecb/products/pdf/en-g5q.pdf" H 4150 2850 50  0001 L CNN
 	1    4150 2850
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R1
 U 1 1 60148E97
-P 2550 3450
-F 0 "R?" H 2620 3496 50  0000 L CNN
-F 1 "1KR" H 2620 3405 50  0000 L CNN
-F 2 "" V 2480 3450 50  0001 C CNN
-F 3 "~" H 2550 3450 50  0001 C CNN
-	1    2550 3450
+P 2500 3550
+F 0 "R1" H 2570 3596 50  0000 L CNN
+F 1 "1KR" H 2570 3505 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2430 3550 50  0001 C CNN
+F 3 "~" H 2500 3550 50  0001 C CNN
+	1    2500 3550
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:RJ12 J?
+L Connector:RJ12 J1
 U 1 1 601498EC
 P 5250 2150
-F 0 "J?" H 5307 2717 50  0000 C CNN
+F 0 "J1" H 5307 2717 50  0000 C CNN
 F 1 "RJ12" H 5307 2626 50  0000 C CNN
-F 2 "" V 5250 2175 50  0001 C CNN
+F 2 "Connector_RJ:RJ12_Amphenol_54601" V 5250 2175 50  0001 C CNN
 F 3 "~" V 5250 2175 50  0001 C CNN
 	1    5250 2150
 	-1   0    0    1   
 $EndComp
-$Comp
-L MCU_Module:WeMos_D1_mini U?
-U 1 1 60143495
-P 1800 3350
-F 0 "U?" H 1800 2461 50  0000 C CNN
-F 1 "WeMos_D1_mini" H 1800 2370 50  0000 C CNN
-F 2 "Module:WEMOS_D1_mini_light" H 1800 2200 50  0001 C CNN
-F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H -50 2200 50  0001 C CNN
-	1    1800 3350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	1400 4050 1400 3350
+	3950 2550 3400 2550
 Wire Wire Line
-	1400 250  -1050 250 
-Wire Wire Line
-	3950 2550 3150 2550
-Wire Wire Line
-	3150 2550 3150 2700
-Connection ~ 1400 2950
-Wire Wire Line
-	1400 2950 1400 250 
-Connection ~ 1400 3250
-Wire Wire Line
-	1400 3250 1400 2950
-Connection ~ 1400 3350
-Wire Wire Line
-	1400 3350 1400 3250
-Wire Wire Line
-	3950 3150 3150 3150
-Wire Wire Line
-	3150 3150 3150 3000
-Wire Wire Line
-	2200 3450 2400 3450
-Wire Wire Line
-	2700 3450 2850 3450
+	3950 3150 3400 3150
 Wire Wire Line
 	3150 3250 3150 3150
-Connection ~ 3150 3150
 Wire Wire Line
 	4250 2550 4250 1950
 Wire Wire Line
@@ -130,114 +97,186 @@ Connection ~ 4750 2450
 Wire Wire Line
 	4750 2450 4850 2450
 $Comp
-L power:AC #PWR?
-U 1 1 6015B1D9
-P 1750 800
-F 0 "#PWR?" H 1750 700 50  0001 C CNN
-F 1 "AC" H 1750 1075 50  0000 C CNN
-F 2 "" H 1750 800 50  0001 C CNN
-F 3 "" H 1750 800 50  0001 C CNN
-	1    1750 800 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 6015CF15
-P 1750 1250
-F 0 "#PWR?" H 1750 1000 50  0001 C CNN
-F 1 "GND" H 1755 1077 50  0000 C CNN
-F 2 "" H 1750 1250 50  0001 C CNN
-F 3 "" H 1750 1250 50  0001 C CNN
-	1    1750 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4007 D?
-U 1 1 6015E548
-P 2550 1750
-F 0 "D?" H 2550 1967 50  0000 C CNN
-F 1 "1N4007" H 2550 1876 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2550 1575 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 2550 1750 50  0001 C CNN
-	1    2550 1750
-	0    1    1    0   
-$EndComp
-$Comp
-L Diode:1N4007 D?
-U 1 1 60160B96
-P 3150 1750
-F 0 "D?" H 3150 1967 50  0000 C CNN
-F 1 "1N4007" H 3150 1876 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3150 1575 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3150 1750 50  0001 C CNN
-	1    3150 1750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Diode:1N4007 D?
-U 1 1 60161C4A
-P 2850 1450
-F 0 "D?" H 2850 1667 50  0000 C CNN
-F 1 "1N4007" H 2850 1576 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2850 1275 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 2850 1450 50  0001 C CNN
-	1    2850 1450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2550 1600 2550 1450
-Wire Wire Line
-	2550 1450 2700 1450
-Wire Wire Line
-	3150 1600 3150 1450
-Wire Wire Line
-	3150 1450 3000 1450
-Wire Wire Line
-	3000 2050 3150 2050
-Wire Wire Line
-	3150 2050 3150 1900
-Wire Wire Line
-	2550 1900 2550 2050
-Wire Wire Line
-	2550 2050 2700 2050
-$Comp
-L Diode:1N4007 D?
-U 1 1 601629F3
-P 2850 2050
-F 0 "D?" H 2850 2267 50  0000 C CNN
-F 1 "1N4007" H 2850 2176 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2850 1875 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 2850 2050 50  0001 C CNN
-	1    2850 2050
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 600F6E7B
+P 2350 1050
+F 0 "J2" H 2268 725 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 2268 816 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal" H 2350 1050 50  0001 C CNN
+F 3 "~" H 2350 1050 50  0001 C CNN
+	1    2350 1050
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1750 800  3150 800 
-Wire Wire Line
-	3150 800  3150 1450
-Connection ~ 3150 1450
-Wire Wire Line
-	2550 2050 1900 2050
-Wire Wire Line
-	1900 2050 1900 1250
-Wire Wire Line
-	1900 1250 1750 1250
-Connection ~ 2550 2050
-Wire Wire Line
 	4850 2150 4850 2200
-Wire Wire Line
-	4850 2200 1900 2200
-Wire Wire Line
-	1900 2200 1900 2050
 Connection ~ 4850 2200
 Wire Wire Line
 	4850 2200 4850 2250
-Connection ~ 1900 2050
 Wire Wire Line
-	4350 3150 5600 3150
+	2550 1050 3300 1050
 Wire Wire Line
-	5600 3150 5600 800 
+	4150 3150 4350 3150
 Wire Wire Line
-	5600 800  3150 800 
-Connection ~ 3150 800 
+	2650 3550 2850 3550
+Wire Wire Line
+	2850 3550 2850 3450
+$Comp
+L Device:R R2
+U 1 1 600FC16C
+P 2500 3450
+F 0 "R2" H 2570 3496 50  0000 L CNN
+F 1 "1KR" H 2570 3405 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2430 3450 50  0001 C CNN
+F 3 "~" H 2500 3450 50  0001 C CNN
+	1    2500 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q2
+U 1 1 600FDB99
+P 2850 2200
+F 0 "Q2" H 3041 2246 50  0000 L CNN
+F 1 "BC547" H 3041 2155 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 3050 2125 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 2850 2200 50  0001 L CNN
+	1    2850 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2700 3400 2550
+Wire Wire Line
+	3400 3000 3400 3150
+Connection ~ 3400 3150
+Wire Wire Line
+	3400 3150 3150 3150
+Wire Wire Line
+	2950 3650 3150 3650
+Connection ~ 2950 3650
+$Comp
+L Connector:RJ12 J3
+U 1 1 60104AAE
+P 5250 1300
+F 0 "J3" H 5307 1867 50  0000 C CNN
+F 1 "RJ12" H 5307 1776 50  0000 C CNN
+F 2 "Connector_RJ:RJ12_Amphenol_54601" V 5250 1325 50  0001 C CNN
+F 3 "~" V 5250 1325 50  0001 C CNN
+	1    5250 1300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4850 1300 4850 1350
+Connection ~ 4850 1350
+Wire Wire Line
+	4850 1350 4850 1400
+$Comp
+L Relay:G5Q-1 K2
+U 1 1 60106BC3
+P 3350 1550
+F 0 "K2" H 3780 1596 50  0000 L CNN
+F 1 "SRD-03VDC-SL-C" H 3780 1505 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 3800 1500 50  0001 L CNN
+F 3 "https://www.omron.com/ecb/products/pdf/en-g5q.pdf" H 3350 1550 50  0001 L CNN
+	1    3350 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1050 3300 1850
+Wire Wire Line
+	3300 1850 3550 1850
+Wire Wire Line
+	3550 1850 3550 2200
+Wire Wire Line
+	3550 2200 4150 2200
+Connection ~ 3550 1850
+Wire Wire Line
+	4150 2200 4150 3150
+$Comp
+L Diode:1N4007 D1
+U 1 1 60109B66
+P 2700 1550
+F 0 "D1" H 2700 1767 50  0000 C CNN
+F 1 "1N4007" H 2700 1676 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2700 1375 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 2700 1550 50  0001 C CNN
+	1    2700 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3150 1250 2700 1250
+Wire Wire Line
+	2700 1250 2700 1400
+Wire Wire Line
+	3150 1850 2950 1850
+Wire Wire Line
+	2700 1850 2700 1700
+Wire Wire Line
+	4850 1100 4850 1200
+Wire Wire Line
+	4850 1500 4850 1600
+Wire Wire Line
+	3450 1250 3450 1100
+Wire Wire Line
+	3450 1100 4850 1100
+Connection ~ 4850 1100
+Wire Wire Line
+	3650 1250 4400 1250
+Wire Wire Line
+	4400 1250 4400 1600
+Wire Wire Line
+	4400 1600 4850 1600
+Connection ~ 4850 1600
+Wire Wire Line
+	5700 950  5700 1350
+Wire Wire Line
+	5700 2200 4850 2200
+Wire Wire Line
+	4850 1350 5700 1350
+Connection ~ 5700 1350
+Wire Wire Line
+	5700 1350 5700 2200
+Wire Wire Line
+	2550 950  5700 950 
+Connection ~ 3400 2550
+Wire Wire Line
+	2700 1250 1900 1250
+Wire Wire Line
+	1900 1250 1900 2250
+Connection ~ 2700 1250
+Wire Wire Line
+	2950 2000 2950 1850
+Connection ~ 2950 1850
+Wire Wire Line
+	2950 1850 2700 1850
+Wire Wire Line
+	2650 2200 2650 3450
+Wire Wire Line
+	2950 2400 2950 3650
+Wire Wire Line
+	2300 2250 2300 2550
+Wire Wire Line
+	2300 2550 3400 2550
+Wire Wire Line
+	1900 2250 2300 2250
+Connection ~ 1900 2250
+$Comp
+L MCU_Module:WeMos_D1_mini U1
+U 1 1 60143495
+P 1800 3350
+F 0 "U1" H 1800 2461 50  0000 C CNN
+F 1 "WeMos_D1_mini" H 1800 2370 50  0000 C CNN
+F 2 "Module:WEMOS_D1_mini_light" H 1800 2200 50  0001 C CNN
+F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H -50 2200 50  0001 C CNN
+	1    1800 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3550 2350 3550
+Wire Wire Line
+	2200 3450 2350 3450
+Wire Wire Line
+	2950 4150 1800 4150
+Wire Wire Line
+	2950 3650 2950 4150
+Wire Wire Line
+	1900 2250 1900 2550
 $EndSCHEMATC
