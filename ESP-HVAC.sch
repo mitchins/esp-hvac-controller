@@ -56,13 +56,13 @@ Wire Wire Line
 $Comp
 L Device:R R2
 U 1 1 600FC16C
-P 2500 3450
-F 0 "R2" H 2570 3496 50  0000 L CNN
-F 1 "1KR" H 2570 3405 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2430 3450 50  0001 C CNN
-F 3 "~" H 2500 3450 50  0001 C CNN
-	1    2500 3450
-	0    -1   -1   0   
+P 2750 3500
+F 0 "R2" H 2820 3546 50  0000 L CNN
+F 1 "1KR" H 2820 3455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2680 3500 50  0001 C CNN
+F 3 "~" H 2750 3500 50  0001 C CNN
+	1    2750 3500
+	-1   0    0    1   
 $EndComp
 $Comp
 L Transistor_BJT:BC547 Q2
@@ -151,7 +151,7 @@ Wire Wire Line
 Wire Wire Line
 	2550 950  5700 950 
 Wire Wire Line
-	2700 1250 1900 1250
+	2700 1250 2350 1250
 Connection ~ 2700 1250
 Wire Wire Line
 	2950 2000 2950 1850
@@ -159,26 +159,7 @@ Connection ~ 2950 1850
 Wire Wire Line
 	2950 1850 2700 1850
 Wire Wire Line
-	2650 2200 2650 3450
-$Comp
-L MCU_Module:WeMos_D1_mini U1
-U 1 1 60143495
-P 1800 3350
-F 0 "U1" H 1800 2461 50  0000 C CNN
-F 1 "WeMos_D1_mini" H 1800 2370 50  0000 C CNN
-F 2 "Module:WEMOS_D1_mini_light" H 1800 2200 50  0001 C CNN
-F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H -50 2200 50  0001 C CNN
-	1    1800 3350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 3450 2350 3450
-Wire Wire Line
-	2950 4150 1800 4150
-Wire Wire Line
-	2950 2400 2950 4150
-Wire Wire Line
-	1900 1250 1900 2550
+	2650 2200 2650 3350
 Wire Wire Line
 	4750 1950 4750 1600
 Wire Wire Line
@@ -198,4 +179,84 @@ Wire Wire Line
 Connection ~ 4300 1100
 Wire Wire Line
 	4300 1100 4850 1100
+Wire Wire Line
+	2950 2400 2950 3900
+Wire Wire Line
+	2750 3650 2750 3750
+Wire Wire Line
+	2750 3350 2650 3350
+$Comp
+L Regulator_Linear:AMS1117-3.3 U1
+U 1 1 6015534D
+P 1900 2950
+F 0 "U1" V 1854 3055 50  0000 L CNN
+F 1 "AMS1117-3.3" V 1945 3055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 1900 3150 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 2000 2700 50  0001 C CNN
+	1    1900 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1900 3250 1900 3450
+Wire Wire Line
+	1600 2950 1500 2950
+Wire Wire Line
+	1350 2950 1350 3900
+$Comp
+L Connector:Barrel_Jack J4
+U 1 1 60159B55
+P 1100 2550
+F 0 "J4" H 1157 2875 50  0000 C CNN
+F 1 "Barrel_Jack" H 1157 2784 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 1150 2510 50  0001 C CNN
+F 3 "~" H 1150 2510 50  0001 C CNN
+	1    1100 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 1250 2350 3450
+Wire Wire Line
+	1400 2650 1900 2650
+Wire Wire Line
+	1400 2450 1500 2450
+Wire Wire Line
+	1500 2450 1500 2950
+Connection ~ 1500 2950
+Wire Wire Line
+	1500 2950 1350 2950
+$Comp
+L ESP8266.lib:ESP-01v090 U2
+U 1 1 6014A4F6
+P 2200 4750
+F 0 "U2" H 2200 5265 50  0000 C CNN
+F 1 "ESP-01v090" H 2200 5174 50  0000 C CNN
+F 2 "ESP8266.pretty:ESP-01" H 2200 4750 50  0001 C CNN
+F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 2200 4750 50  0001 C CNN
+	1    2200 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 4600 3150 4250
+Wire Wire Line
+	3150 4250 2950 4250
+Wire Wire Line
+	1350 3900 2950 3900
+Connection ~ 2950 3900
+Wire Wire Line
+	2950 3900 2950 4250
+Wire Wire Line
+	1150 3450 1150 4900
+Wire Wire Line
+	1150 4900 1250 4900
+Connection ~ 1900 3450
+Wire Wire Line
+	1900 3450 1150 3450
+Wire Wire Line
+	1900 3450 2350 3450
+Wire Wire Line
+	3150 4700 3450 4700
+Wire Wire Line
+	3450 4700 3450 3750
+Wire Wire Line
+	3450 3750 2750 3750
 $EndSCHEMATC
