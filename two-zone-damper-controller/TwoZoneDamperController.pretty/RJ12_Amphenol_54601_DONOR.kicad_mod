@@ -1,0 +1,116 @@
+(footprint "RJ12_Amphenol_54601_DONOR"
+  (version 20241229)
+  (generator "kicad-mcp")
+  (generator_version "9.0")
+  (layer "F.Cu")
+  (descr "Candidate recovered from archived 2021 Amphenol 54601 RJ12 footprint. Socket view: pin 1 at x=0 y=0; physical fit/orientation must be verified.")
+  (tags "RJ12 6P6C Amphenol 54601 donor through hole")
+
+  (property "Reference" "REF**" (at 0 -1.27 0)
+    (layer "F.SilkS")
+    (uuid "3c905434-2a54-4207-a4f1-c0d8484fcfda")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (property "Value" "RJ12_Amphenol_54601_DONOR" (at 0 1.27 0)
+    (layer "F.Fab")
+    (uuid "a52250ed-5609-4d96-b267-6b9723e7361b")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (property "Datasheet" "" (at 0 0 0)
+    (layer "F.Fab")
+    (uuid "7993ac92-6563-40b0-be9b-acaf5bed9ebd")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+
+  (fp_rect
+    (start -2.5 -2.5)
+    (end 9 19)
+    (stroke (width 0.05) (type default))
+    (fill none)
+    (layer "F.CrtYd")
+    (uuid "aed9f4e0-12cb-4c9d-ba21-bd259ecd4f1a")
+  )
+
+  (fp_rect
+    (start -2 -2)
+    (end 8.5 18)
+    (stroke (width 0.12) (type default))
+    (fill none)
+    (layer "F.SilkS")
+    (uuid "a0bc1ad7-df8c-4b0a-a3ff-bcfb99c42072")
+  )
+
+  (fp_rect
+    (start -1.5 -1.5)
+    (end 7.85 16.5)
+    (stroke (width 0.1) (type default))
+    (fill none)
+    (layer "F.Fab")
+    (uuid "32ebbd18-0d90-48b1-b826-232578148db5")
+  )
+
+  (pad "1" thru_hole rect
+    (at 0 0)
+    (size 1.52 1.52)
+    (drill 0.76)
+    (layers "*.Cu" "*.Mask")
+    (uuid "37ff8987-97c0-4c17-9d7c-97f9e31b1131")
+  )
+
+  (pad "2" thru_hole circle
+    (at 1.27 2.54)
+    (size 1.52 1.52)
+    (drill 0.76)
+    (layers "*.Cu" "*.Mask")
+    (uuid "e37cae17-f34d-465f-b833-c0ce62268304")
+  )
+
+  (pad "3" thru_hole circle
+    (at 2.54 0)
+    (size 1.52 1.52)
+    (drill 0.76)
+    (layers "*.Cu" "*.Mask")
+    (uuid "383e4d9a-223a-4614-941f-008008be56d5")
+  )
+
+  (pad "4" thru_hole circle
+    (at 3.81 2.54)
+    (size 1.52 1.52)
+    (drill 0.76)
+    (layers "*.Cu" "*.Mask")
+    (uuid "d32cfc01-eb69-4c0e-9f3e-7292efe59cca")
+  )
+
+  (pad "5" thru_hole circle
+    (at 5.08 0)
+    (size 1.52 1.52)
+    (drill 0.76)
+    (layers "*.Cu" "*.Mask")
+    (uuid "4b2ec429-50f9-48ec-9f03-285c7b53294b")
+  )
+
+  (pad "6" thru_hole circle
+    (at 6.35 2.54)
+    (size 1.52 1.52)
+    (drill 0.76)
+    (layers "*.Cu" "*.Mask")
+    (uuid "b5b7616e-961c-40fb-a785-5a8e3cfb37f6")
+  )
+
+  (pad "" np_thru_hole circle
+    (at -1.91 -8.89)
+    (size 3.25 3.25)
+    (drill 3.25)
+    (layers "*.Cu" "*.Mask")
+    (uuid "39ab486f-af9a-4512-88b8-5a0b72faca6f")
+  )
+
+  (pad "" np_thru_hole circle
+    (at 1.91 -8.89)
+    (size 3.25 3.25)
+    (drill 3.25)
+    (layers "*.Cu" "*.Mask")
+    (uuid "166e1b3a-4d10-4e5e-9e9c-fef37af73095")
+  )
+
+)

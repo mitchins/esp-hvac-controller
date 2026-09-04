@@ -1,0 +1,180 @@
+(footprint "Wemos_D1_mini_FemaleSocket_DONOR"
+  (version 20241229)
+  (generator "kicad-mcp")
+  (generator_version "9.0")
+  (layer "F.Cu")
+  (descr "Candidate from archived 2021 WEMOS_D1_mini_light footprint. 2x8 2.54 mm female headers; fit must be verified with actual D1 Mini.")
+  (tags "Wemos D1 mini ESP8266 female socket donor")
+
+  (property "Reference" "REF**" (at 0 -1.27 0)
+    (layer "F.SilkS")
+    (uuid "7b2acf07-2d36-4048-9724-25e7bdc51ae6")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (property "Value" "Wemos_D1_mini_FemaleSocket_DONOR" (at 0 1.27 0)
+    (layer "F.Fab")
+    (uuid "cdc53fbf-fbad-41d9-91ff-db87ffe7bb66")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (property "Datasheet" "" (at 0 0 0)
+    (layer "F.Fab")
+    (uuid "02397619-2bec-42ac-bc7a-ebbaae939fc7")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+
+  (fp_rect
+    (start -1.7 -8.6)
+    (end 24.6 26.4)
+    (stroke (width 0.05) (type default))
+    (fill none)
+    (layer "F.CrtYd")
+    (uuid "3be3486d-2264-4d16-995c-0afac306f498")
+  )
+
+  (fp_rect
+    (start -1.5 -8.4)
+    (end 24.4 26.2)
+    (stroke (width 0.12) (type default))
+    (fill none)
+    (layer "F.SilkS")
+    (uuid "90ba84fe-9a41-422c-82cd-384c53b5ce97")
+  )
+
+  (fp_rect
+    (start -1.37 -8.21)
+    (end 24.23 25.99)
+    (stroke (width 0.1) (type default))
+    (fill none)
+    (layer "F.Fab")
+    (uuid "9854f0f5-5760-4b3f-8f41-c0ac6e4f3f88")
+  )
+
+  (pad "1" thru_hole rect
+    (at 0 0)
+    (size 2 2)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "d4ea13dc-8279-43eb-9145-bade34bca016")
+  )
+
+  (pad "2" thru_hole oval
+    (at 0 2.54)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "342b52ec-bd09-44e8-be26-853ae8ad878f")
+  )
+
+  (pad "3" thru_hole oval
+    (at 0 5.08)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "4cf55880-280d-4682-a417-574014169e8a")
+  )
+
+  (pad "4" thru_hole oval
+    (at 0 7.62)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "a5140f7b-0316-48e3-950d-9b060923189d")
+  )
+
+  (pad "5" thru_hole oval
+    (at 0 10.16)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "6923fce1-f856-4179-bf0d-0e61a84de99a")
+  )
+
+  (pad "6" thru_hole oval
+    (at 0 12.7)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "9cec577f-5f04-4873-b58a-e1f61c68c4d0")
+  )
+
+  (pad "7" thru_hole oval
+    (at 0 15.24)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "491d5e0c-15c5-413f-b763-c07dadfc238d")
+  )
+
+  (pad "8" thru_hole oval
+    (at 0 17.78)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "eb94f37f-6a24-48d0-9dfa-5d1e42dfbd36")
+  )
+
+  (pad "9" thru_hole oval
+    (at 22.86 17.78)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "e80a94a9-fdbd-49b1-8025-43cbc77d6e00")
+  )
+
+  (pad "10" thru_hole oval
+    (at 22.86 15.24)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "9bf02f73-d0ab-45f3-88de-d418795659ba")
+  )
+
+  (pad "11" thru_hole oval
+    (at 22.86 12.7)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "09bb22aa-5f38-4dfc-bd9b-548e54272788")
+  )
+
+  (pad "12" thru_hole oval
+    (at 22.86 10.16)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "13d4968a-1cb0-4e8d-bd99-04c137120a81")
+  )
+
+  (pad "13" thru_hole oval
+    (at 22.86 7.62)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "206ce447-142f-4139-88dd-4cfe3cfd201c")
+  )
+
+  (pad "14" thru_hole oval
+    (at 22.86 5.08)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "8f397071-20cd-4db2-be0a-5b59b882e3ca")
+  )
+
+  (pad "15" thru_hole oval
+    (at 22.86 2.54)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "98a481ff-9b79-4072-b2e3-07e3efc108c2")
+  )
+
+  (pad "16" thru_hole oval
+    (at 22.86 0)
+    (size 2 1.6)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (uuid "1f764287-1f18-4c31-9d48-1fa29208cf14")
+  )
+
+)
