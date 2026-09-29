@@ -1,2 +1,21 @@
 fp-info-cache
 *.*bak
+.DS_Store
+
+# KiCad per-user/session files and recoverable working artifacts.
+*.kicad_prl
+~*.lck
+two-zone-damper-controller/.mcp-backups/
+two-zone-damper-controller/TwoZoneDamperController-backups/
+two-zone-damper-controller/TwoZoneDamperController.recovered.*.kicad_pcb
+
+# Superseded and transient review/export work. The dated 1 oz release is tracked.
+two-zone-damper-controller/output/
+two-zone-damper-controller/review/
+two-zone-damper-controller/TwoZoneDamperController_2d_view.png
+two-zone-damper-controller/TwoZoneDamperController_drc_*.txt
+two-zone-damper-controller/TwoZoneDamperController_drc_*.json
+two-zone-damper-controller/u2-reroute-working.dsn
+two-zone-damper-controller/u2_reroute_drc_current.rpt
+two-zone-damper-controller/release/TwoZoneDamperController-2026-09-27-fab-release-candidate/
+two-zone-damper-controller/release/TwoZoneDamperController-2026-09-27-fab-release-candidate.zip

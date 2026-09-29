@@ -2,7 +2,7 @@
   (version 20241209)
   (generator "kicad-mcp")
   (generator_version "9.0")
-  (symbol "HK4100F_DC5V_SHG"
+  (symbol "Songle_SRD_05VDC_SL_C"
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
@@ -12,41 +12,41 @@
         (font (size 1.27 1.27))
       )
     )
-    (property "Value" "HK4100F_DC5V_SHG"
+    (property "Value" "SRD-05VDC-SL-C 5V"
       (at 0 -2.54 0)
       (effects
         (font (size 1.27 1.27))
       )
     )
-    (property "Footprint" "TwoZoneDamperController:HK4100F_DC5V_SHG"
+    (property "Footprint" "TwoZoneDamperController:Songle_SRD_05VDC_SL_C"
       (at 0 -5.08 0)
       (effects
         (font (size 1.27 1.27))
       )
       (hide yes)
     )
-    (property "Datasheet" "https://data.sah.rs/products/relays/hk4100f_manual.pdf"
+    (property "Datasheet" "Songle SRD series manufacturer dimensional/drilling drawing"
       (at 0 -7.62 0)
       (effects
         (font (size 1.27 1.27))
       )
       (hide yes)
     )
-    (property "Description" "Exact functional mapping for HK4100F-DC5V-SHG 5 V SPDT relay: pin 1 NO, pin 2 coil+, pins 3/4 internally common, pin 5 coil-, pin 6 NC. Datasheet-derived; physical relay verification remains mandatory."
+    (property "Description" "Songle SRD-05VDC-SL-C 5 V sealed 1 Form C relay. Pin mapping: 1 NO, 2 coil+, 3/4 common at one physical COM hole, 5 coil-, 6 NC. The SRD-03VDC-SL-C is a mechanical-only proxy; do not populate it."
       (at 0 -10.16 0)
       (effects
         (font (size 1.27 1.27))
       )
       (hide yes)
     )
-    (property "ki_keywords" "HK4100F relay 5V SPDT"
+    (property "ki_keywords" "Songle SRD relay 5V SPDT Form C"
       (at 0 0 0)
       (effects
         (font (size 1.27 1.27))
       )
       (hide yes)
     )
-    (symbol "HK4100F_DC5V_SHG_0_1"
+    (symbol "Songle_SRD_05VDC_SL_C_0_1"
       (rectangle
         (start -5.08 -5.08)
         (end 5.08 5.08)
@@ -54,7 +54,7 @@
         (fill (type background))
       )
     )
-    (symbol "HK4100F_DC5V_SHG_1_1"
+    (symbol "Songle_SRD_05VDC_SL_C_1_1"
       (pin passive line
         (at 7.62 2.54 180)
         (length 2.54)
@@ -91,7 +91,7 @@
         (name "COM"
           (effects (font (size 1.27 1.27)))
         )
-        (number "4"
+        (number "3"
           (effects (font (size 1.27 1.27)))
         )
       )

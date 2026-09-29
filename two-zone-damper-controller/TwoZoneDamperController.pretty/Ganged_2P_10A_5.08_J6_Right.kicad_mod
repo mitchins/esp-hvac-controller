@@ -1,0 +1,17 @@
+(footprint "Ganged_2P_10A_5.08_J6_Right"
+  (version 20241229)
+  (generator "pcbnew")
+  (layer "F.Cu")
+  (descr "Right logical half of the ganged nominal 1x6, 5.08 mm J5/J6 output terminal assembly. J6 pads 1,2,3 are physical positions 4,5,6. The shared assembly outline is provided by the J5 footprint to prevent duplicate silk.")
+  (tags "ganged 2P 10A terminal 5.08mm nominal 1x6 J5 J6")
+  (property "Reference" "J6" (at 5.08 -4.0 0) (layer "F.SilkS")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (property "Value" "GANGED 1x6 OUTPUT (J5/J6)" (at 5.08 11.8 0) (layer "F.Fab") hide
+    (effects (font (size 1 1) (thickness 0.15))))
+  (property "Datasheet" "" (at 0 0 0) (layer "F.Fab") hide
+    (effects (font (size 1 1) (thickness 0.15))))
+  (attr through_hole)
+  (pad "1" thru_hole roundrect (at 0 0) (size 4.2 4.8) (drill 1.4) (layers "*.Cu" "*.Mask") (roundrect_rratio 0.12))
+  (pad "2" thru_hole oval (at 5.08 0) (size 4.2 4.8) (drill 1.4) (layers "*.Cu" "*.Mask"))
+  (pad "3" thru_hole oval (at 10.16 0) (size 4.2 4.8) (drill 1.4) (layers "*.Cu" "*.Mask"))
+)

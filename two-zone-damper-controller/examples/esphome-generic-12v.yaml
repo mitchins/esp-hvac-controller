@@ -1,0 +1,74 @@
+# Generic 12 V profile: outputs are intentionally independent.
+# Use only for the generic J5/J6 terminal population, never as HVAC interlock
+# firmware. Add your own Wi-Fi/API credentials before compiling.
+esphome:
+  name: two-zone-generic-12v
+
+esp8266:
+  board: d1_mini
+
+logger:
+api:
+  reboot_timeout: 0s
+ota:
+  - platform: esphome
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  reboot_timeout: 0s
+
+# GPIO HIGH energises the respective relay and selects its NO contact.
+# Ordinary 12 V wiring: ON = switched +12 V at NO; OFF = NC unused.
+# Aquarium reversed-field wiring: ON = DAY− at NO; OFF = NIGHT− at NC.
+switch:
+  - platform: gpio
+    id: load_1
+    name: "Generic Load 1"
+    pin: GPIO5
+    restore_mode: ALWAYS_OFF
+    on_turn_on:
+      - output.turn_on: living_led
+    on_turn_off:
+      - output.turn_off: living_led
+  - platform: gpio
+    id: load_2
+    name: "Generic Load 2"
+    pin: GPIO4
+    restore_mode: ALWAYS_OFF
+    on_turn_on:
+      - output.turn_on: rooms_led
+    on_turn_off:
+      - output.turn_off: rooms_led
+
+# Optional but electrically supported local control: buttons toggle their
+# respective generic outputs independently, and the wall LEDs show commands.
+output:
+  - platform: gpio
+    id: living_led
+    pin: GPIO13
+  - platform: gpio
+    id: rooms_led
+    pin: GPIO16
+
+binary_sensor:
+  - platform: gpio
+    id: living_wall_button
+    pin:
+      number: GPIO14
+      mode: INPUT
+      inverted: true
+    filters:
+      - delayed_on_off: 30ms
+    on_press:
+      - switch.toggle: load_1
+  - platform: gpio
+    id: rooms_wall_button
+    pin:
+      number: GPIO12
+      mode: INPUT
+      inverted: true
+    filters:
+      - delayed_on_off: 30ms
+    on_press:
+      - switch.toggle: load_2

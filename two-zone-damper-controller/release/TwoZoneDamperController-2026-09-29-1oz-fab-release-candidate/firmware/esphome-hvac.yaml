@@ -1,0 +1,118 @@
+# HVAC profile: relay OFF = damper OPEN; relay ON = damper CLOSE.
+# Add your own Wi-Fi/API credentials before compiling.
+esphome:
+  name: two-zone-hvac
+
+esp8266:
+  board: d1_mini
+
+logger:
+api:
+  reboot_timeout: 0s
+ota:
+  - platform: esphome
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  reboot_timeout: 0s
+
+# K1/K2 are deliberately internal: only state scripts may command them.
+switch:
+  - platform: gpio
+    id: k1_close
+    pin: GPIO5
+    restore_mode: ALWAYS_OFF
+    internal: true
+  - platform: gpio
+    id: k2_close
+    pin: GPIO4
+    restore_mode: ALWAYS_OFF
+    internal: true
+
+# D7/D0 drive ULN2003 low-side LED channels; high turns the relevant LED on.
+output:
+  - platform: gpio
+    id: living_led
+    pin: GPIO13
+  - platform: gpio
+    id: rooms_led
+    pin: GPIO16
+
+# Each script establishes a complete safe state. Neither zone command can
+# leave both relays energised.
+script:
+  - id: both_open
+    mode: restart
+    then:
+      - switch.turn_off: k1_close
+      - switch.turn_off: k2_close
+      - output.turn_off: living_led
+      - output.turn_off: rooms_led
+  - id: zone_1_only
+    mode: restart
+    then:
+      # K2 closes Zone 2; leave Zone 1's K1 relay off/open.
+      - switch.turn_off: k1_close
+      - switch.turn_on: k2_close
+      - output.turn_on: living_led
+      - output.turn_off: rooms_led
+  - id: zone_2_only
+    mode: restart
+    then:
+      # K1 closes Zone 1; leave Zone 2's K2 relay off/open.
+      - switch.turn_off: k2_close
+      - switch.turn_on: k1_close
+      - output.turn_off: living_led
+      - output.turn_on: rooms_led
+
+# Physical wall buttons: press the selected zone to toggle it; selecting the
+# other zone changes over safely through its complete-state script.
+binary_sensor:
+  - platform: gpio
+    id: living_wall_button
+    pin:
+      number: GPIO14
+      mode: INPUT
+      inverted: true
+    filters:
+      - delayed_on_off: 30ms
+    on_press:
+      - if:
+          condition:
+            switch.is_on: k2_close
+          then:
+            - script.execute: both_open
+          else:
+            - script.execute: zone_1_only
+  - platform: gpio
+    id: rooms_wall_button
+    pin:
+      number: GPIO12
+      mode: INPUT
+      inverted: true
+    filters:
+      - delayed_on_off: 30ms
+    on_press:
+      - if:
+          condition:
+            switch.is_on: k1_close
+          then:
+            - script.execute: both_open
+          else:
+            - script.execute: zone_2_only
+
+# Home Assistant exposes commands, not physical damper-position feedback.
+button:
+  - platform: template
+    name: "HVAC Both Open"
+    on_press:
+      - script.execute: both_open
+  - platform: template
+    name: "HVAC Zone 1 Only"
+    on_press:
+      - script.execute: zone_1_only
+  - platform: template
+    name: "HVAC Zone 2 Only"
+    on_press:
+      - script.execute: zone_2_only

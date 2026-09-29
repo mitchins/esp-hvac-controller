@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "TwoZoneDamperController")(type "KiCad")(uri "/Users/mitchellcurrie/Projects/esp-hvac/two-zone-damper-controller/TwoZoneDamperController.pretty")(options "")(descr "Project-local donor and verified candidate footprints"))
+)

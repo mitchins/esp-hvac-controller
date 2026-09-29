@@ -1,0 +1,37 @@
+(version 1)
+
+# Persisted electrical constraints for the two-layer, 1 oz finished-copper board.
+# The field input and fused positive bus use paired 5.0 mm F.Cu/B.Cu paths.
+# Each relay contact-to-generic-output path is at least 4.0 mm wide.
+
+(rule "USB 5 V clearance"
+    (constraint clearance (min 0.5mm))
+    (condition "A.NetName == '+5V_USB' || B.NetName == '+5V_USB'"))
+
+(rule "Field-side copper clearance"
+    (constraint clearance (min 0.4mm))
+    (condition "A.NetName == 'FIELD_SUPPLY_POS_IN' || A.NetName == 'FIELD_SUPPLY_POS_FUSED' || A.NetName == 'FIELD_SUPPLY_RETURN' || A.NetName == 'Z1_OPEN' || A.NetName == 'Z1_CLOSE' || A.NetName == 'Z2_OPEN' || A.NetName == 'Z2_CLOSE' || B.NetName == 'FIELD_SUPPLY_POS_IN' || B.NetName == 'FIELD_SUPPLY_POS_FUSED' || B.NetName == 'FIELD_SUPPLY_RETURN' || B.NetName == 'Z1_OPEN' || B.NetName == 'Z1_CLOSE' || B.NetName == 'Z2_OPEN' || B.NetName == 'Z2_CLOSE'"))
+
+(rule "10 A field positive paths: paired outer layers"
+    (constraint track_width (min 5.0mm))
+    (condition "A.NetName == 'FIELD_SUPPLY_POS_IN' || A.NetName == 'FIELD_SUPPLY_POS_FUSED'"))
+
+(rule "6 A generic output K1 NC"
+    (constraint track_width (min 4.0mm))
+    (condition "A.fromTo('K1-Pad6', 'J5-Pad1')"))
+
+(rule "6 A generic output K1 NO"
+    (constraint track_width (min 4.0mm))
+    (condition "A.fromTo('K1-Pad1', 'J5-Pad3')"))
+
+(rule "6 A generic output K2 NC"
+    (constraint track_width (min 4.0mm))
+    (condition "A.fromTo('K2-Pad6', 'J6-Pad1')"))
+
+(rule "6 A generic output K2 NO"
+    (constraint track_width (min 4.0mm))
+    (condition "A.fromTo('K2-Pad1', 'J6-Pad3')"))
+
+(rule "Field return pours use solid pad connections"
+    (constraint zone_connection solid)
+    (condition "A.NetName == 'FIELD_SUPPLY_RETURN'"))
